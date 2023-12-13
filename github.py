@@ -1,4 +1,4 @@
-import requests
+ import requests
 import base64
 import os
 import json
@@ -85,7 +85,7 @@ def delete_file(remote_path, token, user, repo):
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()
-        sha = response.json()['sha']
+        sha = response.json()["sha"]
 
         data = {
             "message": f"delete {remote_path}",
